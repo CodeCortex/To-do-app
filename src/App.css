@@ -1,0 +1,111 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('/src/assets/bg.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent input background */
+  backdrop-filter: blur(5px); /* Slight blur for the input */
+}
+
+.todo-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent button background */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: rgba(0, 86, 179, 0.8); /* Darker on hover */
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent item background */
+  backdrop-filter: blur(5px); /* Slight blur for each item */
+}
+
+.todo-item:hover {
+  background-color: rgba(249, 249, 249, 0.5); /* Slightly darker on hover */
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.todo-text {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.todo-text:hover .icon {
+  color: #0056b3;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: #ff4d4f;
+  transition: color 0.3s;
+}
+
+.delete-icon:hover {
+  color: #d32f2f;
+}
